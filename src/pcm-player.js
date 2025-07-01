@@ -51,7 +51,7 @@ class PCMPlayer {
 
   initAudioContext() {
     // 初始化音频上下文的东西
-    this.audioCtx = new (window.AudioContext || window.webkitAudioContext)()
+    this.audioCtx = wx.createWebAudioContext()
     // 控制音量的 GainNode
     // https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createGain
     this.gainNode = this.audioCtx.createGain()
